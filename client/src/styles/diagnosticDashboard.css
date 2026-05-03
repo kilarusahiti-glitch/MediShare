@@ -1,0 +1,295 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Inter", sans-serif; }
+
+.diag-app {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f8fb;
+}
+
+/* ── SIDEBAR ── */
+.diag-sidebar {
+  width: 230px;
+  background: #fff;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.diag-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.diag-logo-icon {
+  width: 38px;
+  height: 38px;
+  background: #7c3aed;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.diag-logo h3 { font-size: 17px; font-weight: 700; }
+
+.diag-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.diag-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  padding: 11px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.diag-nav-item:hover, .diag-nav-item.active {
+  background: #f3f0ff;
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.diag-sidebar-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: #faf8ff;
+  border-radius: 10px;
+  margin-top: 16px;
+}
+
+.diag-avatar-sm { font-size: 26px; }
+.diag-name-sm { font-size: 13px; font-weight: 600; }
+.diag-role-sm { font-size: 11px; color: #888; }
+
+/* ── MAIN ── */
+.diag-main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+.diag-topbar {
+  background: white;
+  padding: 18px 30px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diag-page-title { font-size: 20px; font-weight: 700; }
+.diag-page-sub { font-size: 13px; color: #888; margin-top: 2px; }
+
+.diag-topbar-right { display: flex; align-items: center; gap: 16px; }
+.diag-bell { font-size: 20px; cursor: pointer; }
+
+.diag-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.diag-avatar {
+  width: 38px;
+  height: 38px;
+  background: #f3f0ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* ── CONTENT ── */
+.diag-content { padding: 28px; display: flex; flex-direction: column; gap: 24px; overflow-y: auto; }
+
+/* ── STATS ── */
+.diag-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+.diag-stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  border-left: 4px solid;
+}
+
+.diag-stat-card.blue   { border-color: #2563eb; }
+.diag-stat-card.green  { border-color: #16a34a; }
+.diag-stat-card.purple { border-color: #7c3aed; }
+.diag-stat-card.yellow { border-color: #d97706; }
+
+.diag-stat-num   { font-size: 28px; font-weight: 800; color: #1a1a2e; }
+.diag-stat-label { font-size: 13px; color: #888; }
+
+/* ── CARD ── */
+.diag-card {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.diag-card-title { font-size: 16px; font-weight: 700; margin-bottom: 18px; }
+
+/* ── DROPZONE ── */
+.diag-dropzone {
+  border: 2px dashed #c4b5fd;
+  border-radius: 14px;
+  padding: 48px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #faf8ff;
+}
+
+.diag-dropzone:hover, .diag-dropzone.drag-over {
+  border-color: #7c3aed;
+  background: #f3f0ff;
+}
+
+.diag-drop-icon { font-size: 48px; margin-bottom: 12px; }
+
+.diag-drop-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.diag-drop-text span {
+  color: #7c3aed;
+  text-decoration: underline;
+}
+
+.diag-drop-sub { font-size: 13px; color: #999; }
+
+/* ── TABLE ── */
+.diag-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+
+.diag-table th {
+  text-align: left;
+  padding: 10px 14px;
+  background: #faf8ff;
+  color: #888;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.diag-table td {
+  padding: 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #333;
+}
+
+.diag-table tr:last-child td { border-bottom: none; }
+.diag-table tr:hover td { background: #faf8ff; }
+
+.diag-file-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.diag-file-icon { font-size: 20px; }
+
+.diag-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.diag-badge.uploaded { background: #dcfce7; color: #16a34a; }
+
+.diag-delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.diag-delete-btn:hover { background: #fca5a5; }
+
+.diag-empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: #999;
+}
+
+.diag-empty p { font-size: 16px; margin-bottom: 6px; }
+.diag-empty span { font-size: 13px; color: #bbb; }
+
+/* ── PROFILE ── */
+.diag-profile-grid { display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start; }
+
+.diag-profile-card { text-align: center; }
+
+.diag-profile-avatar { font-size: 72px; margin-bottom: 12px; display: block; }
+
+.diag-profile-card h2 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+
+.diag-spec-badge {
+  display: inline-block;
+  background: #f3f0ff;
+  color: #7c3aed;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.diag-profile-stats {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 16px;
+}
+
+.diag-profile-stats div { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.diag-profile-stats strong { font-size: 20px; font-weight: 800; color: #1a1a2e; }
+.diag-profile-stats span { font-size: 12px; color: #888; }
+
+.diag-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+.diag-info-item label { font-size: 11px; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 0.5px; }
+.diag-info-item p { font-size: 14px; color: #1a1a2e; margin-top: 4px; font-weight: 500; }
+
+@media (max-width: 768px) {
+  .diag-sidebar { display: none; }
+  .diag-stats { grid-template-columns: repeat(2, 1fr); }
+  .diag-profile-grid { grid-template-columns: 1fr; }
+  .diag-info-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,71 @@
+.auth-container {
+  min-height: 100vh;
+  background: #dce6f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-card {
+  width: 900px;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #1e4fa1;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #1e4fa1;
+  margin-top: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+input, select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.portal-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.portal-tabs button {
+  padding: 8px 20px;
+  border: none;
+  background: #e0e0e0;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 20px;
+}
+
+.portal-tabs .active {
+  background: #1e4fa1;
+  color: white;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #2b78d4, #1e4fa1);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
