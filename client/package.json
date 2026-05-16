@@ -32,3 +32,15 @@
   "build": "vite build",
   "preview": "vite preview"
 }
+{
+  "name": "medishare",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "^7.3.1"
+  }
+}
